@@ -16,8 +16,10 @@ public WebDriver driver;
 		public void openapp()
 		{
 			System.setProperty(chrome_key, chrome_value);
+		//launch browser
 			WebDriver driver = new ChromeDriver();
 			driver.manage().window().maximize();
+			//enter url
 			driver.get(base_url);
 			driver.manage().timeouts().implicitlyWait(10,TimeUnit.SECONDS);
 		}
